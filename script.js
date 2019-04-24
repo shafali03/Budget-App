@@ -15,13 +15,13 @@ class UI {
         this.itemList = [];
         this.itemID = 0;
     }
-    // submit budget method
+    // submit budget method is point to UI class
     submitBudgetForm() {
         const value = this.budgetInput.value;
         if (value === '' || value < 0) {
             this.budgetFeedback.classList.add('showItem');
             this.budgetFeedback.innerHTML = `<p>Value can not be negative</p>`;
-            //removed class after error 
+            // but this method is point to global object
             setTimeout(function () {
                 this.budgetFeedback.classList.remove('showItem');
             }, 4000)
